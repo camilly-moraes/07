@@ -3,45 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog mclaren</title>
+    <title>Blog McLaren</title>
     <style>
-        /* Estilizando o corpo da página para não ficar totalmente branco */
+        /* Estilizando o corpo da página */
         body {
             background-color: #F8F9FA;
-            font-family: Arial, sans-serif; /* Muda a fonte para uma mais moderna */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            line-height: 1.6;
         }
 
-        /* O cabeçalho ganha o laranja marcante da McLaren */
+        /* Cabeçalho com laranja da McLaren */
         h1 {
-            background-color: #FF8700; /* Laranja Papaia */
-            color: #1E1E1E;            /* Texto cinza quase preto para dar contraste */
+            background-color: #FF8700;
+            color: #1E1E1E;
             text-align: center;
             margin: 0;
-            padding: 20px;             /* Adiciona um espaço interno para o texto respirar */
+            padding: 20px;
         }
 
-        /* O conteúdo principal fica centralizado e limitado em telas grandes */
+        /* Logo da McLaren */
+        .logo {
+            display: block;
+            width: 160px;           /* Tamanho bom para logo */
+            height: auto;
+            margin: 20px auto 10px auto;
+        }
+
+        /* Centraliza o conteúdo principal */
         body > p, h2, h2 + p {
             max-width: 800px;
-            margin: 20px auto;         /* Margem de 20px em cima/baixo e auto nas laterais */
+            margin: 20px auto;
             text-align: center;
         }
 
-        /* Um toque especial para o título de Curiosidades */
+        /* Estilo do título Curiosidades */
         h2 {
-            color: #FF8700;            /* Texto em laranja */
-            border-bottom: 2px solid #1E1E1E; /* Uma linha fina abaixo do título */
+            color: #FF8700;
+            border-bottom: 2px solid #1E1E1E;
             padding-bottom: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>blog mclaren</h1>
-    <p>Vou compartilhar conhecimentos sobre a mclaren.</p>
+
+    <h1>Blog McLaren</h1>
     
+    <!-- Logo da McLaren inserida -->
+    <img src="mclaren-logo.png" 
+         class="logo" 
+         alt="Logo McLaren - Equipe de Fórmula 1">
+
+    <p>Vou compartilhar conhecimentos sobre a McLaren.</p>
+   
     <h2>Curiosidades</h2>
-    <p>Aqui vão aparecer informaçoes sobre essa equipe da f1!</p>
+    <p>Aqui vão aparecer informações sobre essa equipe da F1!</p>
+
 </body>
 </html>
