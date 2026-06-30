@@ -3,57 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog McLaren</title>
+    <title>Blog McLaren | Equipe de Fórmula 1</title>
     <style>
-        /* Estilizando o corpo da página */
-        body {
-            background-color: #F8F9FA;
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
-        
-        /* Cabeçalho com laranja da McLaren */
-        h1 {
+
+        body {
+            background-color: #F8F9FA;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        header {
             background-color: #FF8700;
             color: #1E1E1E;
             text-align: center;
-            margin: 0;
             padding: 20px;
-        }
-        
-        /* Logo da McLaren */
-        .logo {
-            display: block;
-            width: 160px;
-            height: auto;
-            margin: 20px auto 10px auto;
-        }
-        
-        /* Centraliza o conteúdo principal */
-        body > p, h2, h2 + p {
-            max-width: 800px;
-            margin: 20px auto;
-            text-align: center;
-        }
-        
-        h2 {
-            color: #FF8700;
-            border-bottom: 2px solid #1E1E1E;
-            padding-bottom: 5px;
         }
 
-        /* ==================== ESTILO DO BOTÃO DE CURTIDA ==================== */
+        .logo {
+            width: 180px;
+            margin: 15px auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        h1, h2 {
+            color: #FF8700;
+        }
+
+        .post {
+            background: white;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .post h2 {
+            border-bottom: 3px solid #FF8700;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Botão de Curtida */
         .like-container {
             text-align: center;
-            margin: 40px auto;
-            padding: 20px;
+            margin: 35px 0 10px 0;
         }
 
         .like-button {
-            font-size: 2.8rem;
-            padding: 15px 35px;
+            font-size: 2.6rem;
+            padding: 14px 32px;
             background-color: white;
             color: #1E1E1E;
             border: 3px solid #FF8700;
@@ -63,12 +73,12 @@
             align-items: center;
             gap: 12px;
             font-weight: bold;
-            box-shadow: 0 6px 12px rgba(255, 135, 0, 0.2);
+            box-shadow: 0 5px 15px rgba(255, 135, 0, 0.25);
             transition: all 0.3s ease;
         }
 
         .like-button:hover {
-            transform: scale(1.08);
+            transform: scale(1.1);
             background-color: #FF8700;
             color: white;
         }
@@ -79,45 +89,84 @@
 
         .like-button span {
             font-size: 1.8rem;
-            min-width: 30px;
+            min-width: 40px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
         }
     </style>
 </head>
 <body>
-    <h1>Blog McLaren</h1>
-   
-    <!-- Logo da McLaren inserida -->
-    <img src="mclaren.png" 
-         class="logo" 
-         alt="Logo McLaren - Equipe de Fórmula 1">
-    
-    <p>Vou compartilhar conhecimentos sobre a McLaren.</p>
-  
-    <h2>Curiosidades</h2>
-    <p>Aqui vão aparecer informações sobre essa equipe da F1!</p>
+    <header>
+        <h1>Blog McLaren</h1>
+        <img src="mclaren.png" class="logo" alt="Logo McLaren">
+    </header>
 
-    <!-- ==================== BOTÃO DE CURTIDA ==================== -->
-    <div class="like-container">
-        <button class="like-button" id="likeBtn">
-            ❤️ <span id="contador">0</span>
-        </button>
-        <p style="margin-top: 10px; color: #666;">Curta se você é fã da McLaren!</p>
+    <div class="container">
+
+        <!-- ==================== POST 1 ==================== -->
+        <div class="post">
+            <h2>1. A História da McLaren na Fórmula 1</h2>
+            <p>A McLaren é uma das equipes mais icônicas da história da Fórmula 1. Fundada por Bruce McLaren em 1963, a equipe já conquistou 12 títulos mundiais de construtores e 12 títulos de pilotos.</p>
+            <p>Entre seus maiores destaques estão as eras de Ayrton Senna, Alain Prost, Mika Häkkinen e Lewis Hamilton.</p>
+            
+            <div class="like-container">
+                <button class="like-button" id="likeBtn1">
+                    ❤️ <span id="contador1">0</span>
+                </button>
+                <p>Curta se você ama a história da McLaren!</p>
+            </div>
+        </div>
+
+        <!-- ==================== POST 2 ==================== -->
+        <div class="post">
+            <h2>2. Por que a McLaren está voltando a ser competitiva?</h2>
+            <p>Após anos difíceis, a McLaren vem mostrando grande evolução. Com o novo regulamento técnico, a equipe tem se destacado com Lando Norris e Oscar Piastri, conquistando pódios e vitórias recentes.</p>
+            <p>O design do carro de 2025 tem sido elogiado por especialistas e a equipe luta consistentemente pela frente do grid.</p>
+            
+            <div class="like-container">
+                <button class="like-button" id="likeBtn2">
+                    ❤️ <span id="contador2">0</span>
+                </button>
+                <p>Curta se você acredita no futuro da McLaren!</p>
+            </div>
+        </div>
+
     </div>
 
+    <footer>
+        Blog McLaren • Feito com paixão por Fórmula 1
+    </footer>
+
     <script>
-        const botao = document.getElementById('likeBtn');
-        const contador = document.getElementById('contador');
-        
-        botao.addEventListener('click', function() {
-            let numero = parseInt(contador.textContent);
-            contador.textContent = numero + 1;
+        // Função reutilizável para criar curtidas com memória
+        function criarCurtida(idBotao, idContador, chaveStorage) {
+            const botao = document.getElementById(idBotao);
+            const contador = document.getElementById(idContador);
             
-            // Efeito de animação
-            botao.style.transform = 'scale(1.3)';
-            setTimeout(() => {
-                botao.style.transform = 'scale(1)';
-            }, 200);
-        });
+            let curtidas = localStorage.getItem(chaveStorage) ? 
+                           parseInt(localStorage.getItem(chaveStorage)) : 0;
+            
+            contador.textContent = curtidas;
+
+            botao.addEventListener('click', () => {
+                curtidas++;
+                contador.textContent = curtidas;
+                localStorage.setItem(chaveStorage, curtidas);
+                
+                // Animação
+                botao.style.transform = 'scale(1.35)';
+                setTimeout(() => botao.style.transform = 'scale(1)', 200);
+            });
+        }
+
+        // Ativar curtidas nos dois posts
+        criarCurtida('likeBtn1', 'contador1', 'curtidasPost1');
+        criarCurtida('likeBtn2', 'contador2', 'curtidasPost2');
     </script>
 </body>
 </html>
