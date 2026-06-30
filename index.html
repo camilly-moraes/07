@@ -13,7 +13,7 @@
             padding: 0;
             line-height: 1.6;
         }
-
+        
         /* Cabeçalho com laranja da McLaren */
         h1 {
             background-color: #FF8700;
@@ -22,43 +22,102 @@
             margin: 0;
             padding: 20px;
         }
-
+        
         /* Logo da McLaren */
         .logo {
             display: block;
-            width: 160px;           /* Tamanho bom para logo */
+            width: 160px;
             height: auto;
             margin: 20px auto 10px auto;
         }
-
+        
         /* Centraliza o conteúdo principal */
         body > p, h2, h2 + p {
             max-width: 800px;
             margin: 20px auto;
             text-align: center;
         }
-
-        /* Estilo do título Curiosidades */
+        
         h2 {
             color: #FF8700;
             border-bottom: 2px solid #1E1E1E;
             padding-bottom: 5px;
         }
+
+        /* ==================== ESTILO DO BOTÃO DE CURTIDA ==================== */
+        .like-container {
+            text-align: center;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .like-button {
+            font-size: 2.8rem;
+            padding: 15px 35px;
+            background-color: white;
+            color: #1E1E1E;
+            border: 3px solid #FF8700;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: bold;
+            box-shadow: 0 6px 12px rgba(255, 135, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .like-button:hover {
+            transform: scale(1.08);
+            background-color: #FF8700;
+            color: white;
+        }
+
+        .like-button:active {
+            transform: scale(0.95);
+        }
+
+        .like-button span {
+            font-size: 1.8rem;
+            min-width: 30px;
+        }
     </style>
 </head>
 <body>
-
     <h1>Blog McLaren</h1>
-    
+   
     <!-- Logo da McLaren inserida -->
     <img src="mclaren.png" 
          class="logo" 
          alt="Logo McLaren - Equipe de Fórmula 1">
-
+    
     <p>Vou compartilhar conhecimentos sobre a McLaren.</p>
-   
+  
     <h2>Curiosidades</h2>
     <p>Aqui vão aparecer informações sobre essa equipe da F1!</p>
 
+    <!-- ==================== BOTÃO DE CURTIDA ==================== -->
+    <div class="like-container">
+        <button class="like-button" id="likeBtn">
+            ❤️ <span id="contador">0</span>
+        </button>
+        <p style="margin-top: 10px; color: #666;">Curta se você é fã da McLaren!</p>
+    </div>
+
+    <script>
+        const botao = document.getElementById('likeBtn');
+        const contador = document.getElementById('contador');
+        
+        botao.addEventListener('click', function() {
+            let numero = parseInt(contador.textContent);
+            contador.textContent = numero + 1;
+            
+            // Efeito de animação
+            botao.style.transform = 'scale(1.3)';
+            setTimeout(() => {
+                botao.style.transform = 'scale(1)';
+            }, 200);
+        });
+    </script>
 </body>
 </html>
